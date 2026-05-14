@@ -1,0 +1,31 @@
+name: Deploy Backend
+
+on:
+  push:
+    tags:
+      - 'backend-v*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: 'stable'
+
+      - name: Get version from tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/backend-}" >> $GITHUB_OUTPUT
+
+      - name: Build
+        run: |
+          go build \
+            -ldflags="-X main.Version=${{ steps.version.outputs.VERSION }}" \
+            -o bin/server \
+            ./backend/...
+
+      # Add your deploy steps here
+      - name: Deploy
+        run: echo "Deploying backend ${{ steps.version.outputs.VERSION }}"
