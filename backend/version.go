@@ -1,3 +1,1 @@
-package main
-
-var Version = "dev"
+package backend

@@ -24,7 +24,7 @@ jobs:
           go build \
             -ldflags="-X main.Version=${{ steps.version.outputs.VERSION }}" \
             -o bin/server \
-            ./backend/...
+            ./backend/cmd
 
       # Add your deploy steps here
       - name: Deploy
