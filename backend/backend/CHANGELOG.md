@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/pradeep2108/autorelease/compare/backend-v1.0.1...backend-v1.0.2) (2026-05-15)
+
+
+### Bug Fixes
+
+* :bug: Reject non-GET requests on health endpoint ([1db9cf3](https://github.com/pradeep2108/autorelease/commit/1db9cf3028044f75360d29cd9f8c684501c7f3ea))
+
 ## [1.0.1](https://github.com/pradeep2108/autorelease/compare/backend-v1.0.0...backend-v1.0.1) (2026-05-15)
 
 
