@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/pradeep2108/autorelease/compare/backend-v1.0.2...backend-v1.1.0) (2026-05-15)
+
+
+### Features
+
+* :sparkles: added graceful shutdown ([c925281](https://github.com/pradeep2108/autorelease/commit/c925281ad31d3b13d7db5b8136279ad6eff4d583))
+* :sparkles: added graceful shutdown ([2b8730d](https://github.com/pradeep2108/autorelease/commit/2b8730dfb23ec079ae8fa612d07ee482eac32f03))
+* ✨ added graceful shutdown [#12](https://github.com/pradeep2108/autorelease/issues/12) ([c925281](https://github.com/pradeep2108/autorelease/commit/c925281ad31d3b13d7db5b8136279ad6eff4d583))
+* add version endpoint ([57d0714](https://github.com/pradeep2108/autorelease/commit/57d0714f156a189ce40a3520b114d781a7f5d012))
+* add version endpoint ([eb1b1b9](https://github.com/pradeep2108/autorelease/commit/eb1b1b955651ca3b1f04abd3b9834d2cdf743aa6))
+* add version endpoint [#11](https://github.com/pradeep2108/autorelease/issues/11) ([57d0714](https://github.com/pradeep2108/autorelease/commit/57d0714f156a189ce40a3520b114d781a7f5d012))
+
 ## [1.0.2](https://github.com/pradeep2108/autorelease/compare/backend-v1.0.1...backend-v1.0.2) (2026-05-15)
 
 
