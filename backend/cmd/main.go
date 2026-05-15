@@ -32,6 +32,7 @@ func main() {
 		}
 	}()
 
+	//gracefull shutdown
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
 	<-quit
@@ -64,8 +65,11 @@ func healthHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	json.NewEncoder(w).Encode(map[string]string{
-		"status":  "ok",
-		"version": Version,
+	json.NewEncoder(w).Encode(map[string]any{
+		"status": "ok",
+		"meta": map[string]string{
+			"version":   Version,
+			"timestamp": time.Now().UTC().Format(time.RFC3339),
+		},
 	})
 }
