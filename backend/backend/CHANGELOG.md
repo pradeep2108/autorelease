@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/pradeep2108/autorelease/compare/backend-v1.1.0...backend-v2.0.0) (2026-05-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* **api:** restructure health response format #16
+
+### Features
+
+* **api:** restructure health response format [#16](https://github.com/pradeep2108/autorelease/issues/16) ([cccdd85](https://github.com/pradeep2108/autorelease/commit/cccdd8552d73fe8f284010165d3132ad6a6c825a))
+
 ## [1.1.0](https://github.com/pradeep2108/autorelease/compare/backend-v1.0.2...backend-v1.1.0) (2026-05-15)
 
 
