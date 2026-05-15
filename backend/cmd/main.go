@@ -13,6 +13,7 @@ func main() {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("/health", healthHandler)
+	mux.HandleFunc("/version", versionHandler)
 
 	server := &http.Server{
 		Addr:         ":8080",
@@ -25,6 +26,17 @@ func main() {
 		panic(err)
 	}
 
+}
+
+func versionHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method != http.MethodGet {
+		http.Error(w, "method not allowed", http.StatusMethodNotAllowed)
+		return
+	}
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(map[string]string{
+		"version": Version,
+	})
 }
 
 func healthHandler(w http.ResponseWriter, r *http.Request) {
