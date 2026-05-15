@@ -20,11 +20,12 @@ jobs:
         run: echo "VERSION=${GITHUB_REF#refs/tags/backend-}" >> $GITHUB_OUTPUT
 
       - name: Build
+        working-directory: backend
         run: |
           go build \
             -ldflags="-X main.Version=${{ steps.version.outputs.VERSION }}" \
             -o bin/server \
-            ./backend/cmd
+            ./cmd
 
       # Add your deploy steps here
       - name: Deploy
